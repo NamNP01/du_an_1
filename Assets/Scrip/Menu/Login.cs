@@ -73,8 +73,7 @@ public class Login : MonoBehaviour
     }
     void OnLoginSuccess(LoginResult result)
     {
-        SceneManager.LoadScene(1);
-        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(1);        
         messageText.text = "Đăng nhập thành công!";
     }    
     void OnError(PlayFabError error)

@@ -65,18 +65,33 @@ public class EnemySpawner : MonoBehaviour
             return;
         }
 
-        Wave wave = waves[currentWave];
+        StartSpecificWave(currentWave);
+
+        // Đặt lại thời gian của đợt tiếp theo
+        nextWaveTime = Time.time + waveInterval;
         currentWave++;
-        WaveText.text = string.Format("Wave {0}/{1}", currentWave, maxWave);
+    }
+
+    public void StartSpecificWave(int waveIndex)
+    {
+        if (waveIndex < 0 || waveIndex >= waves.Count)
+        {
+            Debug.LogError("Chỉ số wave không hợp lệ.");
+            return;
+        }
+
+        // Dừng wave hiện tại nếu có
+        StopAllCoroutines();
+
+        // Bắt đầu wave mới
+        Wave wave = waves[waveIndex];
+        WaveText.text = string.Format("Wave {0}/{1}", waveIndex + 1, maxWave);
 
         foreach (EnemyType enemyType in wave.enemies)
         {
             enemiesRemaining += enemyType.count;
             StartCoroutine(SpawnEnemies(enemyType));
         }
-
-        // Đặt lại thời gian của đợt tiếp theo
-        nextWaveTime = Time.time + waveInterval;
     }
 
     IEnumerator SpawnEnemies(EnemyType enemyType)

@@ -1357,7 +1357,7 @@ GameObject:
   - component: {fileID: 7040365498640220016}
   m_Layer: 0
   m_Name: MeleeTower LV1
-  m_TagString: Level1
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

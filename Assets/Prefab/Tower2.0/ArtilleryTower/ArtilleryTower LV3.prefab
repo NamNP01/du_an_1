@@ -1260,7 +1260,7 @@ GameObject:
   - component: {fileID: 4910622712390518753}
   m_Layer: 0
   m_Name: ArtilleryTower LV3
-  m_TagString: Level1
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
