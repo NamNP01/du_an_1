@@ -8,6 +8,10 @@ public class Bow : MonoBehaviour
     private float nextFireTime = 0f;
     private Animator ani; // Tham chiếu đến Animator
 
+    [Header("Audio")]
+    public AudioSource src;
+    public AudioClip Attack;
+
     void Start()
     {
         ani = GetComponentInParent<Character>().ani; // Lấy tham chiếu đến Animator từ Character
@@ -25,7 +29,7 @@ public class Bow : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward); // Xoay Bow theo hướng chuột
 
         // Kiểm tra nếu nút chuột trái được nhấn và đã qua thời gian chờ
-        if (Input.GetMouseButtonDown(0) && Time.time > nextFireTime)
+        if (Input.GetMouseButtonDown(1)  && Time.time > nextFireTime)
         {
             ShootBullet(direction); // Bắn viên đạn theo hướng chuột
             nextFireTime = Time.time + fireRate; // Cập nhật thời gian cho lần bắn tiếp theo
@@ -35,8 +39,11 @@ public class Bow : MonoBehaviour
 
     void ShootBullet(Vector3 direction)
     {
+        src.clip = Attack;
+        src.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity); // Tạo viên đạn
         bullet.GetComponent<Arrow>().SetDirection(direction); // Thiết lập hướng di chuyển cho viên đạn
+
     }
 
     void SetAttackAnimationTrigger(float angle)

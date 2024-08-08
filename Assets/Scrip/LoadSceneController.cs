@@ -7,7 +7,14 @@ public class LoadSceneController : MonoBehaviour
     {
         SceneManager.LoadScene("MenuLogin");
     }
-
+    public void LoadSelectLevelScene()
+    {
+        SceneManager.LoadScene("LevelMap");
+    }
+    public void LoadWinScene()
+    {
+        SceneManager.LoadScene("Level 6");
+    }
     public void ExitGame()
     {
         // Thoát game khi chạy build

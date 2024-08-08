@@ -23,7 +23,7 @@ public class Login : MonoBehaviour
         SceneManager.LoadScene(1);
         PlayerPrefs.DeleteAll();
     }
-    public void CheckRegister()
+    public void CheckRegister() 
     {
         //if (passWord.text.Length < 6)
         //{

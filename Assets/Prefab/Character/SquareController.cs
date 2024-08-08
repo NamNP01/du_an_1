@@ -5,7 +5,6 @@ public class Character : MonoBehaviour
     public Animator ani;
     private Vector3 lastMovement; // Biến lưu hướng di chuyển cuối cùng
     private Bow bow; // Tham chiếu đến Bow
-
     // Start is called before the first frame update
     void Start()
     {

@@ -32,5 +32,9 @@ public class Arrow : MonoBehaviour
             }
             Destroy(gameObject); // Hủy viên đạn sau khi va chạm
         }
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject); // Hủy viên đạn sau khi va chạm
+        }
     }
 }
