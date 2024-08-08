@@ -12,7 +12,6 @@ public class GuideController : MonoBehaviour
     public GameObject guidePanel; // Panel chứa Guide
 
     private int currentPage = 0;
-    public CastleHealth castleHealth; // Thêm tham chiếu đến CastleHealth
 
     void Start()
     {
@@ -53,9 +52,9 @@ public class GuideController : MonoBehaviour
 
     public void OpenGuide()
     {
-        if (!castleHealth.IsPaused) // Chỉ mở Guide khi MenuPause không hoạt động
+        if (!guidePanel.activeSelf) // Kiểm tra nếu Guide chưa mở
         {
-            guidePanel.SetActive(true);
+            guidePanel.SetActive(true); // Mở Guide
             Time.timeScale = 0f; // Dừng game khi mở Guide
         }
     }

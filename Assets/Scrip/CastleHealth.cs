@@ -129,8 +129,13 @@ public class CastleHealth : MonoBehaviour
 
     public void Pause()
     {
-        if (!guideController.guidePanel.activeSelf)
+        if (!PauseMenu.activeSelf)
         {
+            if (guideController.guidePanel.activeSelf)
+            {
+                guideController.CloseGuide(); // Đóng Guide nếu mở
+            }
+
             PauseMenu.SetActive(true);
             Time.timeScale = 0f;
             IsPaused = true;
@@ -159,14 +164,22 @@ public class CastleHealth : MonoBehaviour
 
     public void OpenGuide()
     {
-        if (!IsPaused)
+        if (!guideController.guidePanel.activeSelf) // Nếu Guide chưa mở
         {
-            guideController.OpenGuide();
+            if (PauseMenu.activeSelf)
+            {
+                Resume(); // Đóng PauseMenu nếu mở
+            }
+
+            guideController.OpenGuide(); // Mở Guide
+            IsPaused = true; // Cập nhật trạng thái IsPaused
         }
     }
 
     public void CloseGuide()
     {
         guideController.CloseGuide();
+        Time.timeScale = 1f; // Tiếp tục game khi đóng Guide
+        IsPaused = false; // Cập nhật trạng thái IsPaused
     }
 }

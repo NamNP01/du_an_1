@@ -375,9 +375,7 @@ MonoBehaviour:
   levelText: {fileID: 5523058501268406369}
   upgradePrizeText: {fileID: 2621255606985286178}
   sellPrizeText: {fileID: 6230516278526197527}
-  towerPrefabs:
-  - {fileID: 2037790870937408666}
-  - {fileID: 1154418436480947498, guid: 832271367d6b1554fb6b8fa8bbce477a, type: 3}
+  towerPrefabs: []
 --- !u!114 &7965042806896197928
 MonoBehaviour:
   m_ObjectHideFlags: 0
