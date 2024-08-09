@@ -6286,6 +6286,7 @@ MonoBehaviour:
   - {fileID: 1315735034}
   - {fileID: 1588880018}
   - {fileID: 1648065775}
+  previousSpeed: 0
 --- !u!212 &1211829043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13580,7 +13581,7 @@ MonoBehaviour:
       wavePath: {fileID: 622807684}
   - enemies:
     - enemyPrefab: {fileID: 8919154352166584542, guid: 38c48ea2dffdafe43b86c7a2504c65a7, type: 3}
-      count: 25
+      count: 10
       spawnInterval: 1
       wavePath: {fileID: 4498433702952794}
     - enemyPrefab: {fileID: 6657470498022561396, guid: f3edc7f4e688d1c4aa786ea8c476d09b, type: 3}
@@ -13592,7 +13593,7 @@ MonoBehaviour:
       spawnInterval: 2
       wavePath: {fileID: 4498433702952794}
     - enemyPrefab: {fileID: 8919154352166584542, guid: 38c48ea2dffdafe43b86c7a2504c65a7, type: 3}
-      count: 25
+      count: 10
       spawnInterval: 1
       wavePath: {fileID: 622807684}
     - enemyPrefab: {fileID: 6657470498022561396, guid: f3edc7f4e688d1c4aa786ea8c476d09b, type: 3}
@@ -13655,19 +13656,19 @@ MonoBehaviour:
       wavePath: {fileID: 622807684}
   - enemies:
     - enemyPrefab: {fileID: 8919154352166584542, guid: 38c48ea2dffdafe43b86c7a2504c65a7, type: 3}
-      count: 30
+      count: 20
       spawnInterval: 1
       wavePath: {fileID: 4498433702952794}
     - enemyPrefab: {fileID: 6657470498022561396, guid: f3edc7f4e688d1c4aa786ea8c476d09b, type: 3}
-      count: 4
+      count: 8
       spawnInterval: 2
       wavePath: {fileID: 4498433702952794}
     - enemyPrefab: {fileID: 2961687403256433939, guid: fd3e7bd9ee96f4847ac53445f33f7a80, type: 3}
-      count: 2
+      count: 3
       spawnInterval: 3
       wavePath: {fileID: 4498433702952794}
     - enemyPrefab: {fileID: 2961687403256433939, guid: fd3e7bd9ee96f4847ac53445f33f7a80, type: 3}
-      count: 30
+      count: 2
       spawnInterval: 1
       wavePath: {fileID: 622807684}
     - enemyPrefab: {fileID: 6657470498022561396, guid: f3edc7f4e688d1c4aa786ea8c476d09b, type: 3}
@@ -13680,11 +13681,11 @@ MonoBehaviour:
       wavePath: {fileID: 622807684}
   - enemies:
     - enemyPrefab: {fileID: 2961687403256433939, guid: fd3e7bd9ee96f4847ac53445f33f7a80, type: 3}
-      count: 15
+      count: 20
       spawnInterval: 3
       wavePath: {fileID: 622807684}
     - enemyPrefab: {fileID: 6657470498022561396, guid: f3edc7f4e688d1c4aa786ea8c476d09b, type: 3}
-      count: 5
+      count: 25
       spawnInterval: 2
       wavePath: {fileID: 4498433702952794}
   spawnPoints: []

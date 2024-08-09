@@ -23,12 +23,16 @@ public class CastleHealth : MonoBehaviour
     public Sprite starSprite;
     public GameObject[] Continue;
 
+    public float previousSpeed;
+
     void Start()
     {
         currenthealth = numOfHearts;
         HeartsText.text = "" + currenthealth;
 
         startingTime = Time.time;
+
+        previousSpeed = GameSpeedController.currentSpeed;
     }
 
     void Update()
@@ -126,7 +130,6 @@ public class CastleHealth : MonoBehaviour
         string timeString = string.Format("{0:00}:{1:00}", minutes, seconds);
         timerText.text = "" + timeString;
     }
-
     public void Pause()
     {
         if (!PauseMenu.activeSelf)
@@ -136,6 +139,7 @@ public class CastleHealth : MonoBehaviour
                 guideController.CloseGuide(); // Đóng Guide nếu mở
             }
 
+            previousSpeed = GameSpeedController.currentSpeed; // Cập nhật previousSpeed trước khi tạm dừng
             PauseMenu.SetActive(true);
             Time.timeScale = 0f;
             IsPaused = true;
@@ -145,14 +149,18 @@ public class CastleHealth : MonoBehaviour
     public void Resume()
     {
         PauseMenu.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = previousSpeed; // Khôi phục lại tốc độ trước đó
+        GameSpeedController.currentSpeed = previousSpeed; // Cập nhật giá trị currentSpeed
         IsPaused = false;
     }
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // Đặt lại tốc độ game về mặc định trước khi restart
+        GameSpeedController.currentSpeed = 1f;
         Time.timeScale = 1f;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         IsPaused = false;
     }
 
@@ -164,22 +172,24 @@ public class CastleHealth : MonoBehaviour
 
     public void OpenGuide()
     {
-        if (!guideController.guidePanel.activeSelf) // Nếu Guide chưa mở
+        if (!guideController.guidePanel.activeSelf)
         {
             if (PauseMenu.activeSelf)
             {
                 Resume(); // Đóng PauseMenu nếu mở
             }
 
-            guideController.OpenGuide(); // Mở Guide
-            IsPaused = true; // Cập nhật trạng thái IsPaused
+            previousSpeed = GameSpeedController.currentSpeed; // Cập nhật previousSpeed trước khi mở guide
+            guideController.OpenGuide();
+            IsPaused = true;
         }
     }
 
     public void CloseGuide()
     {
         guideController.CloseGuide();
-        Time.timeScale = 1f; // Tiếp tục game khi đóng Guide
-        IsPaused = false; // Cập nhật trạng thái IsPaused
+        Time.timeScale = previousSpeed; // Khôi phục lại tốc độ trước đó
+        GameSpeedController.currentSpeed = previousSpeed; // Cập nhật giá trị currentSpeed
+        IsPaused = false;
     }
 }

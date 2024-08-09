@@ -9,12 +9,21 @@ public class GameSpeedController : MonoBehaviour
     private float[] speedLevels = { 1f, 1.5f, 2f };
     private string[] speedLabels = { ">", ">>", ">>>" };
 
-    public Text speedText; // Thêm biến này để tham chiếu tới Text UI
+    public Text speedText;
+
+    public static float currentSpeed = 1f; // Biến tĩnh lưu trữ tốc độ hiện tại
+
+    void Start()
+    {
+        Time.timeScale = currentSpeed;
+        UpdateSpeedText();
+    }
 
     public void ToggleSpeed()
     {
         speedMode = (speedMode + 1) % speedLevels.Length;
-        Time.timeScale = speedLevels[speedMode];
+        currentSpeed = speedLevels[speedMode];
+        Time.timeScale = currentSpeed;
         UpdateSpeedText();
     }
 

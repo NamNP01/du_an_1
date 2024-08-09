@@ -1431,20 +1431,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "B\u1EA3o V\u1EC7 C\u1ED5 Th\xE0nh\r\n\r\nTr\u01B0\u1EDFng nh\xF3m d\u1EF1
-    \xE1n.\r\nNguy\u1EC5n Ph\u01B0\u01A1ng Nam\r\n\r\nVi\u1EBFt m\xE3\r\nNguy\u1EC5n
-    Minh H\u1EA3i\r\nNguy\u1EC5n Ph\u01B0\u01A1ng Nam\r\n\r\nT\xE0i nguy\xEAn h\xECnh
-    \u1EA3nh\r\nK\xF4 \u0110\xE0ng Gia Lu\u1EADt\r\n\r\nT\xE0i nguy\xEAn \xE2m thanh.\r\nNguy\u1EC5n
-    Huy Ho\xE0ng\r\n\r\nTrailer\r\nNguy\u1EC5n Anh Ti\u1EBFn\r\n\r\nV\u1EBD m\xE0n
-    ch\u01A1i\r\nM\xE0n 1\r\nNguy\u1EC5n Ph\u01B0\u01A1ng Nam\nM\xE0n 2\nNguy\u1EC5n
-    Minh H\u1EA3i\r\nM\xE0n 3\r\nNguy\u1EC5n Huy Ho\xE0ng\nM\xE0n 4\r\nNguy\u1EC5n
-    Anh Ti\u1EBFn\nM\xE0n 5\r\nK\xF4 \u0110\xE0ng Gia Lu\u1EADt\n\r\nB\xE1o c\xE1o
-    k\u1ECBch b\u1EA3n.\r\nK\xF4 \u0110\xE0ng Gia Lu\u1EADt\r\nH\u1ED7 tr\u1EE3:
-    Nguy\u1EC5n Ph\u01B0\u01A1ng Nam\r\nH\u1ED7 tr\u1EE3:Nguy\u1EC5n Minh H\u1EA3i\r\n\r\nTester\r\nNguy\u1EC5n
-    Ph\u01B0\u01A1ng Nam\r\nNguy\u1EC5n Minh H\u1EA3i\r\nNguy\u1EC5n Huy Ho\xE0ng\r\nNguy\u1EC5n
-    Anh Ti\u1EBFn\r\nK\xF4 \u0110\xE0ng Gia Lu\u1EADt\r\n\r----------------------------------\nC\u1EA3m
-    \u01A1n m\u1ECDi ng\u01B0\u1EDDi \u0111\xE3 \u1EE7ng h\u1ED9\r\nNh\xF3m s\u1EBD
-    c\u1ED1 g\u1EAFng h\u01A1n trong t\u01B0\u01A1ng lai\r\n"
+  m_text: "B\u1EA3o V\u1EC7 C\u1ED5 Th\xE0nh\r\n\r\nTeam Leader.\r\nNguyen Phuong
+    Nam\r\n\r\nCode.\r\nNguyen Minh Hai\r\nNguyen Phuong Nam\r\n\r\nimage resources.\r\nKo
+    Dang Gia Luat\r\n\r\nSound resources.\r\nNguyen Huy Hoang\r\n\r\nTrailer\r\nNguyen
+    Anh Tien\r\n\r\nDrawing game levels\r\nNguyen Phuong Nam-Level 1\r\nNguyen Minh
+    Hai-Level 2\r\nNguyen Huy Hoang-Level 3\r\nNguyen Anh Tien-Level 4\r\nKo Dang
+    Gia Luat-Level 5\r\n\r\nScript report.\r\nKo Dang Gia Luat\r\nSupport: Nguyen
+    Phuong Nam\r\nSupport: Nguyen Minh Hai\r\n\r\nTester\r\nNguyen Phuong Nam\r\nNguyen
+    Minh Hai\r\nNguyen Huy Hoang\r\nNguyen Anh Tien\r\nKo Dang Gia Luat\r\n\r---------------------------------------------\nThank
+    you everyone for your support.\r\nThe team will strive to do better in the future\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
