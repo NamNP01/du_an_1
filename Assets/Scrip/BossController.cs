@@ -145,6 +145,18 @@ public class BossController : MonoBehaviour
     {
         if (targetTower != null)
         {
+            // Lấy TowerMeleeUpgra component từ targetTower
+            TowerMeleeUpgra towerMeleeUpgra = targetTower.GetComponent<TowerMeleeUpgra>();
+
+            if (towerMeleeUpgra != null)
+            {
+                // Phá hủy tất cả các đơn vị melee đã spawn bởi trụ
+                foreach (GameObject unit in towerMeleeUpgra.spawnedUnits)
+                {
+                    Destroy(unit);
+                }
+            }
+
             // Phá hủy trụ được chọn
             Destroy(targetTower);
         }
