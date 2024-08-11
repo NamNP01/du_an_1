@@ -27,6 +27,10 @@ public class CastleHealth : MonoBehaviour
 
     void Start()
     {
+        // Đặt lại tốc độ game về mặc định mỗi khi bắt đầu
+        GameSpeedController.currentSpeed = 1f;
+        Time.timeScale = 1f;
+
         currenthealth = numOfHearts;
         HeartsText.text = "" + currenthealth;
 
@@ -157,8 +161,8 @@ public class CastleHealth : MonoBehaviour
     public void PlayAgain()
     {
         // Đặt lại tốc độ game về mặc định trước khi restart
-        GameSpeedController.currentSpeed = 1f;
-        Time.timeScale = 1f;
+        //GameSpeedController.currentSpeed = 1f;
+        //Time.timeScale = 1f;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         IsPaused = false;
