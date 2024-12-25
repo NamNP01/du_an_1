@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ArcherTower : MonoBehaviour
 {
-    public enum TowerType { Archer, Bomb, Fire, Magic }
+    public enum TowerType { Archer, Bomb, Magic }
 
     public TowerType towerType;
     public GameObject projectilePrefab;
@@ -143,10 +143,6 @@ public class ArcherTower : MonoBehaviour
         {
             //Ice();
         }
-        else if (towerType == TowerType.Fire && target != null)
-        {
-            Fire();
-        }
         else if (towerType == TowerType.Bomb && target != null)
         {
             Stone();
@@ -198,7 +194,6 @@ public class ArcherTower : MonoBehaviour
     {
         if (!fireVariables.isDamgeStarted)
         {
-            StartCoroutine(ApplyFireDamageOverTime());
             fireVariables.isDamgeStarted = true;
         }
     }
@@ -212,29 +207,7 @@ public class ArcherTower : MonoBehaviour
         }
     }
 
-    IEnumerator ApplyFireDamageOverTime()
-    {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(CirclePoint.transform.position, attackRange);
-        foreach (Collider2D collider in colliders)
-        {
-            if (collider.gameObject.CompareTag("Enemy"))
-            {
-                EnemyHealth enemyHealth = collider.GetComponent<EnemyHealth>();
-                if (enemyHealth != null)
-                {
-                    enemyHealth.TakeDamage(fireVariables.fireDamage);
-                    Debug.Log("Damaged: " + enemyHealth.currentHealth);
-                }
-            }
-        }
-
-        yield return new WaitForSeconds(fireVariables.damageOverTimeInterval);
-
-        if (towerType == TowerType.Fire && target != null)
-        {
-            StartCoroutine(ApplyFireDamageOverTime());
-        }
-    }
+    
 
     IEnumerator ApplyStoneDamageOverTime()
     {

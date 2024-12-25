@@ -7,7 +7,6 @@ public class EnemyAttack : MonoBehaviour
     public float attackRange = 0.5f;
     public float attackCooldown = 1.0f;
     public int attackDamage = 10;
-    private float attackTimer = 0f;
     private Transform target;
     private EnemyController enemyController;
 

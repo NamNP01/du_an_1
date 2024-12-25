@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01974167878e6546b6d5fa6fc733110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerType: 3
+  towerType: 2
   projectilePrefab: {fileID: 3624300465959343509, guid: 0ad38172e0181d84c8c8b626ee8b9ea5, type: 3}
   firePoint: {fileID: 8053404108368825757}
   attackRange: 5

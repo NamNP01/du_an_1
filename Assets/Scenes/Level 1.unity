@@ -2194,6 +2194,7 @@ MonoBehaviour:
   - {fileID: 1054518875}
   - {fileID: 179200545}
   - {fileID: 2070311741}
+  previousSpeed: 0
 --- !u!50 &186537045
 Rigidbody2D:
   serializedVersion: 4
@@ -2292,7 +2293,6 @@ MonoBehaviour:
   nextButton: {fileID: 945479631}
   previousButton: {fileID: 2040099801}
   guidePanel: {fileID: 264277353}
-  castleHealth: {fileID: 186537044}
 --- !u!1 &190514022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,7 +3627,6 @@ MonoBehaviour:
   nextButton: {fileID: 945479631}
   previousButton: {fileID: 2040099801}
   guidePanel: {fileID: 264277353}
-  castleHealth: {fileID: 0}
 --- !u!1 &264881033
 GameObject:
   m_ObjectHideFlags: 0
@@ -17675,7 +17674,7 @@ GameObject:
   - component: {fileID: 1201481021}
   - component: {fileID: 1201481020}
   m_Layer: 5
-  m_Name: IceTowerBuild
+  m_Name: MagicTowerBuild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19712,7 +19711,7 @@ GameObject:
   - component: {fileID: 1269803405}
   - component: {fileID: 1269803404}
   m_Layer: 5
-  m_Name: FireTowerBuild
+  m_Name: MeleeTowerBuild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26884,7 +26883,7 @@ GameObject:
   - component: {fileID: 1369907643}
   - component: {fileID: 1369907646}
   m_Layer: 5
-  m_Name: StoneTowerBuild
+  m_Name: ArtilleryTowerBuild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
